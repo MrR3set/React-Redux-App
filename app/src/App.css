@@ -1,38 +1,103 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+*{
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  background:linear-gradient(90deg, rgb(90, 35, 81),rgb(207, 104, 69));
+  font-family: 'Montserrat', sans-serif;
+}
+.App{
+  height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navContainer{
+  width: 100%;
+  background-color: #000000d5;
+  color: white;
+  margin-bottom: 1%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar{
+  width: 80%;
+  margin: 0 auto;
+}
+.navbar a{
+  font-size: 2rem;
+  font-weight: 500;
+  color: white;
+  text-decoration: none;
+  transition: all 0.5 ease-in-out;
+}
+.navbar a:hover{
+  color: white;
+}
+.navbar a.active{
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.content-container{
+  border-radius:20px;
+  background:rgba(0, 0, 0, 0.300);
+  padding: 3%;
+  width: 90%;
+  margin: 0 auto;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.content-container button{
+  margin: 1% auto;
+  border: none;
+  border-radius: 5px;
+  background-color: slateblue;
+  color: white;
+  font-size: 2rem;
+  padding: 0.2rem 1.5rem;
+  transition: all 0.2s ease-in;
+}
+.content-container button:hover{
+  background-color: darkslateblue;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.data-list-wrapper{
+  width: 100%;
+  padding: 1%;
 }
+.data-list-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+.data-list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left
+}
+.data-list p{
+  width: 29%;
+  font-size: 2rem;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.514);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.227);
+  color: white;
+  border-radius: 20px;
+  margin: 1%;
+  user-select: none;
+  cursor: pointer;
+  transition: all 0.5s step-start
+}
+.data-list p:hover{
+  transform: scale(1.1);
+}
+
+
+

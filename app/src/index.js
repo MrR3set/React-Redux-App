@@ -6,7 +6,8 @@ import {dataReducer} from './reducers/dataReducer'
 import { applyMiddleware, createStore } from 'redux';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import thunk from 'redux-thunk';
+import {BrowserRouter as Router} from "react-router-dom"
 
 const store = createStore(dataReducer,applyMiddleware(thunk));
-ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root'));
+ReactDOM.render(<Router><Provider store={store}><App /></Provider></Router>, document.getElementById('root'));
 
